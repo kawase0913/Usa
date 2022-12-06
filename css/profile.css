@@ -1,3 +1,8 @@
+button{
+    height: 120px;
+    width: 120px;
+    font-size: 200%;
+}
 .menu-btn {
     position: fixed;
     top: 10px;
@@ -93,6 +98,7 @@
 hr{
     margin-top: 85%;
 }
+
 
 
 @media(max-Width:767px){
