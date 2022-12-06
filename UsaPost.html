@@ -2,12 +2,21 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Help画面</title>
+		<title>Usaフォーム画面</title>
 		<script src="importantJS/ncmb.min.js"></script>
         <script src="importantJS/key.js"></script>
-		<script src="js/MAKEUSA.js"></script>
-		<link rel="stylesheet" href="css/makeUsa.css">
+		<script src="js/USAPOST.js"></script>
+		<link rel="stylesheet" href="css/usaPost.css">
 	</head>
 	<body>
+		<input type="submit" name="submit" value="戻る">
+		<h1>Usaフォーム</h1><br>
+		<label>題名:</label><br>
+		<input type="text" id="samne" name="samne" size="40"><br>
+		<input type="file" name="upfile" id="upfile" accept="video/*" /><br>
+		<p>説明文：<br>
+			<input type="text" name="setumei"></p>
+		<input type="submit" name="submit" value="キャンセル">
+		<input type="submit" name="submit" value="投稿する">
 	</body>
 </html>
