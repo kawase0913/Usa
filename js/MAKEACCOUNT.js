@@ -8,14 +8,24 @@ function SaveAcount(){
     let AccountName = document.getElementById("accountName").value;
     let MaileAddress = document.getElementById("address").value;
     let Pass = document.getElementById("pass").value;
-    acountView.set("maile_address",MaileAddress)
-              .set("account_name",AccountName)
-              .set("password",Pass)
-              .save()
-              .then(function(result){
-                console.log("保存成功" + JSON.stringify(result));
-              })
-              .catch(function(error){
-                console.log("保存失敗" + error + "," + JSON.stringify(error));
-              });
+    let RepetitionPass = document.getElementById("repetitionPass").value;
+
+    if(AccountName == "" || MaileAddress == "" || Pass == "" || RepetitionPass == "" || Pass != RepetitionPass){
+        alert("入力条件を満たしていません。間違いがないか再度ご確認ください。");
+    }else{
+        if(){
+            alert("このメールアドレスは既に使用されています。");
+        }else{
+            acountView.set("maile_address",MaileAddress)
+                .set("account_name",AccountName)
+                .set("password",Pass)
+                .save()
+                .then(function(result){
+                    console.log("保存成功" + JSON.stringify(result));
+                })
+                .catch(function(error){
+                    console.log("保存失敗" + error + "," + JSON.stringify(error));
+                });
+        }
+    }
 }
