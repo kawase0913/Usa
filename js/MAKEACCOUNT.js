@@ -3,16 +3,18 @@ let clientKey = "64f25d7b797210f4581015d44968b616dd2b619ee07fbad2293c0ef4e7716b7
 let ncmb = new NCMB(applicationKey,clientKey);
 
 function SaveAcount(){
-
     let AcountView = ncmb.DataStore("AcountView");
     let acountView = new AcountView();
-
-    
-
+    let AccountName = document.getElementById("accountName");
+    let MaileAddress = document.getElementById("address");
+    let Pass = document.getElementById("pass");
+    acountView.set("maile_address",MaileAddress).save();
+    acountView.set("account_name",AccountName).save();
+    acountView.set("password",Pass).save();
 }
 document.addEventListener("DOMContentLoaded", function(){
     document.getElementById("send").addEventListener('click',function(){
-        var name=document.getElementById("accountName");
+        let name=document.getElementById("accountName");
 });
 }
 );
