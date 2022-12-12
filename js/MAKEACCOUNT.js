@@ -12,12 +12,3 @@ function SaveAcount(){
     acountView.set("account_name",AccountName).save();
     acountView.set("password",Pass).save();
 }
-document.addEventListener("DOMContentLoaded", function(){
-    document.getElementById("send").addEventListener('click',function(){
-        let name=document.getElementById("accountName");
-});
-}
-);
-window.localStorage.setItem("", val);
-
-
