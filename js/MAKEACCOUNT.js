@@ -5,10 +5,17 @@ let ncmb = new NCMB(applicationKey,clientKey);
 function SaveAcount(){
     let AcountView = ncmb.DataStore("AcountView");
     let acountView = new AcountView();
-    let AccountName = document.getElementById("accountName");
-    let MaileAddress = document.getElementById("address");
-    let Pass = document.getElementById("pass");
-    acountView.set("maile_address",MaileAddress).save();
-    acountView.set("account_name",AccountName).save();
-    acountView.set("password",Pass).save();
+    let AccountName = document.getElementById("accountName").value;
+    let MaileAddress = document.getElementById("address").value;
+    let Pass = document.getElementById("pass").value;
+    acountView.set("maile_address",MaileAddress)
+              .set("account_name",AccountName)
+              .set("password",Pass)
+              .save()
+              .then(function(result){
+                console.log("保存成功" + JSON.stringify(result));
+              })
+              .catch(function(error){
+                console.log("保存失敗" + error + "," + JSON.stringify(error));
+              });
 }
