@@ -10,6 +10,12 @@ function SaveAcount(){
     
 
 }
-
+document.addEventListener("DOMContentLoaded", function(){
+    document.getElementById("send").addEventListener('click',function(){
+        var name=document.getElementById("accountName");
+});
+}
+);
+window.localStorage.setItem("", val);
 
 
