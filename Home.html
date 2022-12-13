@@ -2,37 +2,34 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>HOME画面</title>
 		<script src="importantJS/ncmb.min.js"></script>
         <script src="importantJS/key.js"></script>
 		<script src="js/HOME.js"></script>
 		<link rel="stylesheet" href="css/home.css">
 	</head>
 	<main>
-		<div>
-			<h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="oicロゴ画像"></a></h1>
-		</div>
+		<br>
 		<nav>
 			<l1><a href="Profile.html">アカウント</a></l1>
 		</nav>
-		
-			<div>
-				<form  method="post">
-					<input id="searchkey" type="search" name="search" placeholder="キーワードを入力🔍">
-					<input type="submit" name="submit" value="検索">
-				  </form>
-			</div>
-		
-
+		<br>
+		<div>
+			<form  method="post" id="search">
+				<input id="searchkey" type="search" name="search" placeholder="キーワードを入力🔍">
+				<input id="searchButton" type="submit" name="submit" value="検索">
+			</form>
+		</div>
 	</main>
-	<body>
-		
-		<nav>
-			<l1><a href="UsaChoice.html">Usa 機能</a></l1>
-			<l1><a href="Normalpost.html">投稿</a></l1>
-			<l1><a href="Ranking.html">ランキング</a></l1>
-			<l1><a href="Library.html">ライブラリ</a></l1>
-
+	<body></body>
+	<footer class="menu">
+		<nav class="nav">
+			<ul>
+				<li><a href="Home.html" class="logo1"><img src="img/ホームボタン.png" alt="oicロゴ画像"></a></li>
+				<li><a href="UsaChoice.html" class="logo2"><img src="img/Usa1.png" alt="oicロゴ画像"></a></li>
+				<li><a href="Post.html" class="logo1"><img src="img/作成ボタン.png" alt="oicロゴ画像"></a></li>
+				<li><a href="Ranking.html" class="logo1"><img src="img/ランキングボタン.png" alt="oicロゴ画像"></a></li>
+				<li><a href="Library.html" class="logo1"><img src="img/ライブラリボタン.png" alt="oicロゴ画像"></a></li>
+			</ul>
 		</nav>
-	</body>
+	</footer>
 </html>
