@@ -10,12 +10,15 @@ function SaveAcount(){
     let Pass = document.getElementById("pass").value;
     let RepetitionPass = document.getElementById("repetitionPass").value;
 
-    let searchAddress = [];
-    searchAddress = acountView.equalTo("maile_address")
-        .fetchAll();
+    let searchAddress;
+    searchAddress = acountView.equalTo("maile_address",MaileAddress)
+
     if(AccountName == "" || MaileAddress == "" || Pass == "" || RepetitionPass == "" || Pass != RepetitionPass){
         alert("入力条件を満たしていません。間違いがないか再度ご確認ください。");
     }else{
+        if(searchAddress==MaileAddress){
+            alert("すでに存在しているメールアドレスです");
+        }else{
         acountView.set("maile_address",MaileAddress)
             .set("account_name",AccountName)
             .set("password",Pass)
@@ -27,4 +30,5 @@ function SaveAcount(){
                 console.log("保存失敗" + error + "," + JSON.stringify(error));
             });
     }
+}
 }
