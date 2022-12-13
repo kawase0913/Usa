@@ -5,13 +5,20 @@ let ncmb = new NCMB(applicationKey,clientKey);
 function SaveAcount(){
     let AcountView = ncmb.DataStore("AcountView");
     let acountView = new AcountView();
+
+    // HTMLファイルから要素を取得
     let AccountName = document.getElementById("accountName").value;
     let MaileAddress = document.getElementById("address").value;
     let Pass = document.getElementById("pass").value;
     let RepetitionPass = document.getElementById("repetitionPass").value;
 
+<<<<<<< HEAD
     let searchAddress;
     searchAddress = acountView.equalTo("maile_address",MaileAddress)
+=======
+    // データベースからデータを取得
+    
+>>>>>>> e17282a92031ebfe2b4b8619dc78bfb51af00ea6
 
     if(AccountName == "" || MaileAddress == "" || Pass == "" || RepetitionPass == "" || Pass != RepetitionPass){
         alert("入力条件を満たしていません。間違いがないか再度ご確認ください。");
