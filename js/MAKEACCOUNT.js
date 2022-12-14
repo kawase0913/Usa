@@ -20,7 +20,7 @@ function SaveAcount(){
             .save()
             .then(function(user){
                 console.log("新規ユーザー登録成功:" + JSON.stringify(user));
-                window.location.href = "./Login.html";
+                window.location.href="./Home.html";
             })
             .catch(function(error){
                 console.log("ユーザー登録失敗:" + error + "," + JSON.stringify(error));
