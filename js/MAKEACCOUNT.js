@@ -12,8 +12,8 @@ function SaveAcount(){
     let Pass = document.getElementById("pass").value;
     let RepetitionPass = document.getElementById("repetitionPass").value;
 
-    // データベースからデータを取得
-    
+
+
     if(AccountName == "" || MaileAddress == "" || Pass == "" || RepetitionPass == "" || Pass != RepetitionPass){
         alert("入力条件を満たしていません。間違いがないか再度ご確認ください。");
     }else{
