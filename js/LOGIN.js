@@ -7,10 +7,7 @@ function LoginCeck(){
     let Pass = document.getElementById("Pass").value;
     let AcountView = ncmb.DataStore("AcountView");
     let acountView = new AcountView();
-    
-
-            acountView.login("maile_address",Add)
-                        .login("password",Pass)
+            ncmb.User.login(Add,Pass)
             .then(function(result) {
                 console.log("ログイン成功:" + JSON.stringify(result));
                 window.location.href="./Home.html";

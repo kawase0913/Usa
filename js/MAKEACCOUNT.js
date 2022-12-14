@@ -6,8 +6,6 @@ function SaveAcount(){
     let AcountView = ncmb.DataStore("AcountView");
     let acountView = new AcountView();
 
-  
-
     let AccountName = document.getElementById("accountName").value;
     let MaileAddress = document.getElementById("address").value;
     let Pass = document.getElementById("pass").value;
@@ -21,11 +19,29 @@ function SaveAcount(){
             .set("password",Pass)
             .save()
             .then(function(result){
-                console.log("保存成功" + JSON.stringify(result));
+                console.log("新規登録成功" + JSON.stringify(result));
                 window.location.href = "./Login.html";
             })
             .catch(function(error){
                 console.log("保存失敗" + error + "," + JSON.stringify(error));
             });
     }
+Updated upstream
+}
+
+function Modol(){
+    // HTMLファイルから要素を取得
+    let AccountName = document.getElementById("accountName").value;
+    let MaileAddress = document.getElementById("address").value;
+    let Pass = document.getElementById("pass").value;
+    let RepetitionPass = document.getElementById("repetitionPass").value;
+
+    AccountName = "";
+    MaileAddress = "";
+    Pass = "";
+    RepetitionPass = "";
+
+    window.location.href = "./Top.html";
+
+Stashed changes
 }
