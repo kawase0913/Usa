@@ -3,5 +3,8 @@ let clientKey = "64f25d7b797210f4581015d44968b616dd2b619ee07fbad2293c0ef4e7716b7
 let ncmb = new NCMB(applicationKey,clientKey);
  
 function throwUsa(){
+    let ArticleView = ncmb.DataStore("ArticleView");
+    let articleView = new ArticleView();
+
     let 
 }
