@@ -1,9 +1,16 @@
+section{
+    background-color:lightgreen;
+    box-shadow:0 0 10px 0 #3f5170;
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+
 .box8 {
     padding: 0.5em 1em;
     margin: 0em 0;
     color: #232323;
     background: #fff8e8;
-    border-left: solid 10px #ffc06e;
+    border-left: solid 10px orange;
 }
 .box8 p {
     margin: 0; 
