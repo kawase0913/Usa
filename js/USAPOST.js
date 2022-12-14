@@ -6,5 +6,9 @@ function throwUsa(){
     let ArticleView = ncmb.DataStore("ArticleView");
     let articleView = new ArticleView();
 
-    let 
+    let Samne = document.getElementById("samne").value;
+    let Upfile = document.getElementById("upfile").value;
+    let UsaText = document.getElementById("UsaText").value;
+
+    
 }
