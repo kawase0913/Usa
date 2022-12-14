@@ -20,7 +20,7 @@ main{
 /*フォーム全体*/
 #form1{
     position:relative;/*フォームの相対位置*/	
-    max: width 400px;px;/*フォームのサイズ*/
+    max: width 400px;/*フォームのサイズ*/
     margin-bottom:15px;/*フォームの下に余白*/	 	
     }
     /*検索ボックス*/
