@@ -11,12 +11,7 @@ function SaveAcount(){
     let MaileAddress = document.getElementById("address").value;
     let Pass = document.getElementById("pass").value;
     let RepetitionPass = document.getElementById("repetitionPass").value;
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 91318f086f46c5cc2e99148196ac5ae5249ccf6e
+    
     if(AccountName == "" || MaileAddress == "" || Pass == "" || RepetitionPass == "" || Pass != RepetitionPass){
         alert("入力条件を満たしていません。間違いがないか再度ご確認ください。");
         }else{
