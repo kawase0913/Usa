@@ -3,8 +3,7 @@ let clientKey = "64f25d7b797210f4581015d44968b616dd2b619ee07fbad2293c0ef4e7716b7
 let ncmb = new NCMB(applicationKey,clientKey);
 
 function SaveAcount(){
-    let AcountView = ncmb.DataStore("AcountView");
-    let acountView = new AcountView();
+    let user = new ncmb.User();
 
     let AccountName = document.getElementById("accountName").value;
     let MaileAddress = document.getElementById("address").value;
@@ -13,17 +12,18 @@ function SaveAcount(){
     
     if(AccountName == "" || MaileAddress == "" || Pass == "" || RepetitionPass == "" || Pass != RepetitionPass){
         alert("入力条件を満たしていません。間違いがないか再度ご確認ください。");
-        }else{
-        acountView.set("maile_address",MaileAddress)
-            .set("account_name",AccountName)
+    }else{
+        user.set("mailAddress",MaileAddress)
+            .set("userName",AccountName)
             .set("password",Pass)
+            .signUpByAccount()
             .save()
-            .then(function(result){
-                console.log("新規登録成功" + JSON.stringify(result));
+            .then(function(user){
+                console.log("新規ユーザー登録成功:" + JSON.stringify(user));
                 window.location.href = "./Login.html";
             })
             .catch(function(error){
-                console.log("保存失敗" + error + "," + JSON.stringify(error));
+                console.log("ユーザー登録失敗:" + error + "," + JSON.stringify(error));
             });
     }
 }
