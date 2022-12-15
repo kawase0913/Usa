@@ -17,10 +17,9 @@ function SaveAcount(){
             .set("userName",AccountName)
             .set("password",Pass)
             .signUpByAccount()
-            .save()
             .then(function(user){
                 console.log("新規ユーザー登録成功:" + JSON.stringify(user));
-                window.location.href="./Home.html";
+                window.location.href="./Login.html";
             })
             .catch(function(error){
                 console.log("ユーザー登録失敗:" + error + "," + JSON.stringify(error));
