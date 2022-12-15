@@ -18,10 +18,12 @@ function SaveAcount(){
             .set("password",Pass)
             .signUpByAccount()
             .then(function(user){
+                // 新規登録成功時の処理
                 console.log("新規ユーザー登録成功:" + JSON.stringify(user));
                 window.location.href="./Login.html";
             })
             .catch(function(error){
+                // 新規登録失敗時の処理
                 console.log("ユーザー登録失敗:" + error + "," + JSON.stringify(error));
             });
     }

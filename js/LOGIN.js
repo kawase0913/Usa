@@ -5,14 +5,14 @@ let ncmb = new NCMB(applicationKey,clientKey);
 function LoginCeck(){
     let Add = document.getElementById("Address").value;
     let Pass = document.getElementById("Pass").value;
-    let AcountView = ncmb.DataStore("AcountView");
-    let acountView = new AcountView();
-            ncmb.User.login(Add,Pass)
-            .then(function(result) {
-                console.log("ログイン成功:" + JSON.stringify(result));
-                window.location.href="./Home.html";
-            })
-            .catch(function(error) {
-                console.log("ログイン失敗:" + error + ", " + JSON.stringify(error));
-            });
-    }
+
+    ncmb.User.login(Add,Pass)
+        .then(function(user){
+            // ログイン成功時の処理
+            console.log("ログイン成功:" + JSON.stringify(user));
+        })
+        .catch(function(error){
+            // ログイン失敗時の処理
+            console.log("ログイン失敗:" + "," + JSON.stringify(error));
+        });
+}
