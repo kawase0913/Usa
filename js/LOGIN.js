@@ -6,11 +6,11 @@ function LoginCeck(){
     let Add = document.getElementById("Address").value;
     let Pass = document.getElementById("Pass").value;
     ncmb.User.login(Add,Pass)
-            .then(function(result) {
-                console.log("ログイン成功:" + JSON.stringify(result));
-                window.location.href="./Home.html";
-            })
-            .catch(function(error) {
-                console.log("ログイン失敗:" + error + ", " + JSON.stringify(error));
-            });
-        }
+        .then(function(result) {
+            console.log("ログイン成功:" + JSON.stringify(result));
+            window.location.href="./Home.html";
+        })
+        .catch(function(error) {
+            console.log("ログイン失敗:" + error + ", " + JSON.stringify(error));
+        });
+}
