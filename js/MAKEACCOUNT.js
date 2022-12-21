@@ -4,13 +4,11 @@ let ncmb = new NCMB(applicationKey,clientKey);
 
 function SaveAcount(){
     let MaileAddress = document.getElementById("address").value;
-    let AccountName = document.getElementById("accountName").value;
     
-    if(AccountName == "" || MaileAddress == ""){
+    if(MaileAddress == ""){
         alert("入力条件を満たしていません。間違いがないか再度ご確認ください。");
     } else{
         ncmb.User.requestSignUpEmail(MaileAddress)
-            .set("userName",AccountName)
             .then(function(user){
                 console.log("新規ユーザー登録成功:" + JSON.stringify(user));
                 window.location.href="./Login.html";
