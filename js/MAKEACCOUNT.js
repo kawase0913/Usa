@@ -3,28 +3,20 @@ let clientKey = "64f25d7b797210f4581015d44968b616dd2b619ee07fbad2293c0ef4e7716b7
 let ncmb = new NCMB(applicationKey,clientKey);
 
 function SaveAcount(){
-    let user = new ncmb.User();
-
-    let AccountName = document.getElementById("accountName").value;
     let MaileAddress = document.getElementById("address").value;
-    let Pass = document.getElementById("pass").value;
-    let RepetitionPass = document.getElementById("repetitionPass").value;
+    let AccountName = document.getElementById("accountName").value;
     
-    if(AccountName == "" || MaileAddress == "" || Pass == "" || RepetitionPass == "" || Pass != RepetitionPass){
+    if(AccountName == "" || MaileAddress == ""){
         alert("入力条件を満たしていません。間違いがないか再度ご確認ください。");
-    }else{
-        user.set("mailAddress",MaileAddress)
+    } else{
+        ncmb.User.requestSignUpEmail(MaileAddress)
             .set("userName",AccountName)
-            .set("password",Pass)
-            .signUpByAccount()
             .then(function(user){
-                // 新規登録成功時の処理
                 console.log("新規ユーザー登録成功:" + JSON.stringify(user));
                 window.location.href="./Login.html";
             })
-            .catch(function(error){
-                // 新規登録失敗時の処理
-                console.log("ユーザー登録失敗:" + error + "," + JSON.stringify(error));
+            .catch(function(err){
+                console.log("ユーザー登録失敗:" + err + "," + JSON.stringify(err));
             });
     }
 }

@@ -5,12 +5,15 @@ let ncmb = new NCMB(applicationKey,clientKey);
 function LoginCeck(){
     let Add = document.getElementById("Address").value;
     let Pass = document.getElementById("Pass").value;
-    ncmb.User.login(Add,Pass)
-        .then(function(result) {
+    
+    ncmb.User.loginWithMailAddress(Add, Pass)
+        .then(function(result){
             console.log("ログイン成功:" + JSON.stringify(result));
+            alert("ログインに成功しました。");
             window.location.href="./Home.html";
         })
-        .catch(function(error) {
-            console.log("ログイン失敗:" + error + ", " + JSON.stringify(error));
+        .catch(function(err){
+            alert("ログインに失敗しました。")
+            console.log("ログイン失敗:" + err + ", " + JSON.stringify(err));
         });
 }
