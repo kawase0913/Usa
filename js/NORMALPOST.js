@@ -7,19 +7,16 @@ function throwNORMALPOST(){
     let ArticleView = ncmb.DataStore("ArticleView");
     let articleView = new ArticleView();
 
+    var fs = require('upfile');
+    fs.readFile('', function (err, data) {
+      if (err) throw err;
+      var name = "abc.txt";
+      ncmb.File.upload(name, data)
+          .then(function(data){
 
-    let Samne = document.getElementById("samne").value;
-    let Upfile = document.getElementById("upfile").value;
-    let ExplanatoryText = document.getElementById("explanatorytext").value;
+           })
+          .catch(function(err){
 
-        articleView.set("title",Samne)
-        .set("picture",Upfile)
-        .set("sentence",ExplanatoryText)
-        .save()
-        .then(function(result){
-            console.log("投稿成功" + JSON.stringify(result));
-        })
-        .catch(function(error){
-            console.log("投稿失敗" + error + "," + JSON.stringify(error));
-        });
+           });
+    });
 }
