@@ -1,9 +1,43 @@
+body{
+    background-color: #d2faf7;
+}
 .logo img{
-    margin-right: 25px;
+    width: 425px;
+    height: 350px;
 }
 
 
 @media (max-width: 767px){
     /* 全体 */
 
+}
+.box1 {
+    padding: 10px 65px 10px 65px;
+    margin: 0em 0;
+    color: #232323;
+    background: #21f5e3;
+    border-left: solid 10px rgb(5, 102, 230);
+}
+.box1 p {
+    margin: 0; 
+    padding: 0;
+}
+.box2 {
+    padding: 10px 45px 10px 45px;
+    margin: 0em 0;
+    color: #232323;
+    background: #21f5e3;
+    border-left: solid 10px rgb(5, 102, 230);
+}
+.box2 p {
+    margin: 0; 
+    padding: 0;
+}.box3 {
+    padding: 10px 0px 0px 20em;
+    margin: 0em 0;
+
+}
+.box3 p {
+    margin: 0; 
+    padding: 0;
 }
