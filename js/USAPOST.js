@@ -3,12 +3,18 @@ let clientKey = "64f25d7b797210f4581015d44968b616dd2b619ee07fbad2293c0ef4e7716b7
 let ncmb = new NCMB(applicationKey,clientKey);
  
 function throwUsa(){
-    let ArticleView = ncmb.DataStore("ArticleView");
-    let articleView = new ArticleView();
 
-    let Samne = document.getElementById("samne").value;
-    let Upfile = document.getElementById("upfile").value;
-    let UsaText = document.getElementById("UsaText").value;
+    let onFormSend = function(){
+      let fileName = document.getElementById("file-name").value;
+      let fileData = document.getElementById("file-data").files[0];
 
-    
+      ncmb.File.upload(fileName, fileData)
+        .then(function(res){
+          // アップロード後処理
+          window.location.href="./Home.html";
+        })
+        .catch(function(err){
+          // エラー処理
+        });
+    }
 }
