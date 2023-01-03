@@ -7,14 +7,15 @@ function throwUsa(){
     let onFormSend = function(){
       let fileName = document.getElementById("file-name").value;
       let fileData = document.getElementById("file-data").files[0];
+      let filetext = document.getElementById("UsaText").value;
 
-      ncmb.File.upload(fileName, fileData)
+      ncmb.File.upload(fileName, fileData, filetext)
         .then(function(res){
-          // アップロード後処理
-          window.location.href="./Home.html";
+            // アップロード後処理
+            window.location.href="./Home.html";
         })
         .catch(function(err){
-          // エラー処理
+            // エラー処理
         });
     }
 }
